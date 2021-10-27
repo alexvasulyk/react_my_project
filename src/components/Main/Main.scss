@@ -1,0 +1,133 @@
+.main {
+  max-width: 560px;
+  margin-bottom: 52px;
+  padding: 0 10px;
+
+  &__post-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 48px;
+    margin-bottom: 20px;
+
+    .animation {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      color: #fff;
+      background-color: rgba(1, 1, 1, 0.5);
+      backdrop-filter: blur(12px);
+      border-radius: 48px;
+    }
+  }
+  &-header {
+    display: flex;
+    margin-bottom: 16px;
+    position: relative;
+
+    img {
+      margin-right: 16px;
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      &-name {
+        color: #010101;
+        line-height: 20px;
+      }
+      &-text {
+        font-size: 12px;
+        line-height: 20px;
+        opacity: 0.25;
+        color: #010101;
+      }
+    }
+    .menu-dots {
+      padding: 0;
+      margin-left: auto;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+
+      img {
+        margin: 0;
+      }
+    }
+  }
+  .post-img {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: red;
+    }
+  }
+  &-desc {
+    margin: 0;
+    line-height: 20px;
+    color: #808080;
+    margin-bottom: 18px;
+  }
+  &-inter {
+    display: flex;
+    align-items: center;
+
+    .img-counter {
+      margin-right: 8px;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+    }
+    .counter {
+      width: 10px;
+      margin-right: 40px;
+    }
+    .btn_share {
+      font-weight: 600;
+      line-height: 20px;
+      width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      margin-left: auto;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+}
+
+.animation-bufer-enter {
+  opacity: 0;
+}
+.animation-bufer-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.animation-bufer-exit {
+  opacity: 1;
+}
+.animation-bufer-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.animation-liker-enter-done {
+  path {
+    fill: #fb766e;
+  }
+}

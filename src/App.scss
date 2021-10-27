@@ -1,0 +1,47 @@
+.App {
+  background-color: #fafbfc;
+
+  .new-post {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 170px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #0087ff;
+    background-color: #fff;
+    padding: 4px 13px;
+    margin-bottom: 5px;
+    img {
+      cursor: pointer;
+    }
+  }
+  .content {
+    display: flex;
+    max-width: 956px;
+    margin: 0 auto;
+    padding: 0 10px;
+    margin-top: 100px;
+    justify-content: space-between;
+    &-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+.profile-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .App .content {
+    justify-content: center;
+  }
+  .profile-bar {
+    display: none;
+  }
+}

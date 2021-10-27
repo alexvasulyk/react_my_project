@@ -1,0 +1,92 @@
+.nav-bar-component {
+  display: block;
+}
+.your-profile {
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 800px) and (max-width: 1920px) {
+  .your-profile {
+    .content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      max-width: 956px;
+      margin: 0 auto;
+      padding: 64px 10px 48px;
+
+      .profile {
+        width: 100%;
+        position: relative;
+        padding: 0 110px 0 50px;
+        padding-left: 110px;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 105px;
+          height: 105px;
+          top: 0;
+          left: 0;
+          background-image: url(../profileBar/img/Avatar.png);
+          background-repeat: no-repeat;
+          transform: translate(0, 10%);
+        }
+
+        .top-bar {
+          justify-content: right;
+          position: absolute;
+          top: 0;
+          right: 0;
+          &__followers {
+            margin-right: 80px;
+            align-items: flex-end;
+          }
+          &__following {
+            align-items: flex-end;
+          }
+          .btn-avatar {
+            display: none;
+          }
+        }
+        &-name {
+          margin: 0;
+          flex-direction: column;
+          max-width: 208px;
+          justify-content: center;
+          font-size: 1.5rem;
+          &__work {
+            margin: 10px 0 20px;
+            font-size: 1rem;
+            color: #000;
+          }
+
+          .dash {
+            display: none;
+          }
+        }
+        &-description {
+          text-align: left;
+          max-width: 304px;
+          margin: 0;
+        }
+        &-btn {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          transform: translate(0, -100%);
+          justify-content: right;
+          button {
+            width: 140px;
+          }
+          &__edit {
+            border: 1px solid #c9cad1;
+          }
+        }
+      }
+    }
+  }
+}
